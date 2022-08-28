@@ -114,3 +114,44 @@ main > ol {
 .movie img {
    width: 100%;
 }
+
+dialog {
+   position: fixed;
+   width: 90vw;
+   height: 90vh;
+   top: 5vh;
+   left: 5vw;
+   background-color: white;
+   border: 2px solid black;
+   border-radius: 12px;
+   padding: 20px;
+   box-shadow: 8px 18px 4px 0px rgb(0 0 0 / 0.5);
+   overflow: auto;
+}
+
+dialog[open] {
+   display: flex;
+   gap: 20px;
+}
+
+dialog img {
+   width: 200px;
+}
+
+#info {
+   flex-basis: 200px;
+   flex-shrink: 0;
+}
+
+#movies {
+   display: grid;
+   grid-template-columns: repeat(2, 1fr);
+   gap: 20px;
+   height: max-content;
+}
+
+#movies > video {
+   width: 100%;
+   height: auto;
+   aspect-ratio: 16/9;
+}
