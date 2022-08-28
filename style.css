@@ -16,7 +16,9 @@ body {
 }
 
 header {
-   text-align: center;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
 }
 
 input, button, select {
@@ -37,6 +39,7 @@ input, button, select {
    overflow: hidden;
    position: relative;
    box-shadow: 4px 8px 4px 0px rgb(0 0 0 / 0.5);
+   max-width: 400px;
 }
 
 #search-box label {
@@ -62,8 +65,12 @@ select {
    margin-bottom: 10px;
 }
 
-select + select {
-   margin-left: 12px;
+label[for="year"] {
+   margin-left: 10px;
+}
+
+#year {
+   margin-right: 12px;
 }
 
 #submit {
