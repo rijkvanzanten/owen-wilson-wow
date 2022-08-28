@@ -11,10 +11,10 @@
       <header>
          <img id="logo" src="/assets/owen.png" alt="Owen Wilson">
 
-         <form id="search">
-            <input name="search" type="search" placeholder="Midnight in Paris">
+         <form id="search-box">
+            <input name="search" id="search" type="search" placeholder="Midnight in Paris">
 
-            <label for="year">Year</label>
+            <label for="year">Year:</label>
             <select name="year" id="year">
                <option value="any">Any</option>
                <option>1996</option>
@@ -41,7 +41,7 @@
                <option>2017</option>
             </select>
 
-            <label for="count">Num. Wows</label>
+            <label for="count">Wows:</label>
             <select name="count" id="count">
                <option value="any">Any</option>
                <option>1</option>
@@ -51,7 +51,7 @@
                <option>5+</option>
             </select>
 
-            <button type="submit">Search</button>
+            <button id="submit" type="submit">Search</button>
          </form>
       </header>
    </body>

@@ -1,3 +1,9 @@
+@font-face {
+   src: url('/assets/kosugi-maru.woff2') format('woff2');
+   font-family: 'Kosugi Maru';
+   font-display: swap;
+}
+
 *, *::before, *::after {
    box-sizing: border-box;
 }
@@ -5,13 +11,69 @@
 body {
    margin: 0;
    background-image: url('/assets/geometric-leaves.png');
+   padding: 0 20px;
+   font-family: 'Kosugi Maru', sans-serif;
 }
 
 header {
    text-align: center;
 }
 
+input, button, select {
+   font-family: inherit;
+   font-size: inherit;
+}
+
 #logo {
-   filter: drop-shadow(4px 8px 4px rgb(0 0 0 / 0.7));
+   filter: drop-shadow(4px 8px 4px rgb(0 0 0 / 0.5));
    width: 150px;
+   margin-bottom: 20px;
+}
+
+#search-box {
+   border: 2px solid #efefef;
+   background: #fff;
+   border-radius: 12px;
+   overflow: hidden;
+   position: relative;
+   box-shadow: 4px 8px 4px 0px rgb(0 0 0 / 0.5);
+}
+
+#search-box label {
+   color: rgb(169 169 169);
+}
+
+#search {
+   width: 100%;
+   border: none;
+   padding: 10px;
+   border-bottom: 1px solid #efefef;
+   margin-bottom: 10px;
+   display: block;
+}
+
+#search::placeholder {
+   color: rgb(169 169 169);
+}
+
+select {
+   appearance: none;
+   border: none;
+   margin-bottom: 10px;
+}
+
+select + select {
+   margin-left: 12px;
+}
+
+#submit {
+   position: absolute;
+   top: 8px;
+   right: 6px;
+   background-color: blue;
+   color: white;
+   appearance: none;
+   border: none;
+   border-radius: 8px;
+   padding: 4px 8px;
 }
