@@ -1,4 +1,4 @@
-export const wowArr = [
+export const wows = [
   {
     movie: "Bottle Rocket",
     year: 1996,
@@ -2372,3 +2372,27 @@ export const wowArr = [
       "https://assets.ctfassets.net/bs8ntwkklfua/6a4q7B0EwLknSOoN4vAOQU/564fe702d4ed75a6868fd092552a5120/Father_Figures_Wow.mp3",
   },
 ];
+
+export const movies = Object.values(wows.reduce((result, wow) => {
+   const { timestamp, full_line, current_wow_in_movie, video, audio } = wow;
+
+   if (wow.movie in result) {
+      result[wow.movie].wows.push({ timestamp, full_line, current_wow_in_movie, video, audio });
+   } else {
+      const { movie, year, release_date, director, character, movie_duration, total_wows_in_movie, poster } = wow;
+
+      result[wow.movie] = {
+         movie,
+         year,
+         release_date,
+         director,
+         character,
+         movie_duration,
+         total_wows_in_movie,
+         poster,
+         wows: [{ timestamp, full_line, current_wow_in_movie, video, audio }],
+      }
+   }
+
+   return result;
+}, {}));

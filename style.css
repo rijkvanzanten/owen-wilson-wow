@@ -33,7 +33,7 @@ input, button, select {
 }
 
 #search-box {
-   border: 2px solid #efefef;
+   border: 2px solid black;
    background: #fff;
    border-radius: 12px;
    overflow: hidden;
@@ -50,7 +50,7 @@ input, button, select {
    width: 100%;
    border: none;
    padding: 10px;
-   border-bottom: 1px solid #efefef;
+   border-bottom: 2px solid black;
    margin-bottom: 10px;
    display: block;
 }
@@ -83,4 +83,34 @@ label[for="year"] {
    border: none;
    border-radius: 8px;
    padding: 4px 8px;
+}
+
+main > ol {
+   max-width: 800px;
+   display: grid;
+   grid-template-columns: repeat(4, 1fr);
+   gap: 20px;
+   list-style: none;
+   justify-content: center;
+   align-items: center;
+   margin: 60px auto;
+}
+
+.movie {
+   border: 2px solid black;
+   font-size: 0;
+   box-shadow: 4px 8px 4px 0px rgb(0 0 0 / 0.5);
+   transform: scale(1);
+   transition: 150ms ease-in-out;
+   transition-property: transform, box-shadow;
+}
+
+.movie:hover {
+   transform: translateY(-10px);
+   box-shadow: 8px 18px 4px 0px rgb(0 0 0 / 0.5);
+   cursor: pointer;
+}
+
+.movie img {
+   width: 100%;
 }
