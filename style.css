@@ -1,0 +1,17 @@
+*, *::before, *::after {
+   box-sizing: border-box;
+}
+
+body {
+   margin: 0;
+   background-image: url('/assets/geometric-leaves.png');
+}
+
+header {
+   text-align: center;
+}
+
+#logo {
+   filter: drop-shadow(4px 8px 4px rgb(0 0 0 / 0.7));
+   width: 150px;
+}

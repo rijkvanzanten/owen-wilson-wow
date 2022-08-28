@@ -2,10 +2,57 @@
 <html>
    <head>
       <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
       <title>Wow</title>
       <link rel="stylesheet" href="/style.css">
       <script src="/script.js" type="module"></script>
    </head>
    <body>
+      <header>
+         <img id="logo" src="/assets/owen.png" alt="Owen Wilson">
+
+         <form id="search">
+            <input name="search" type="search" placeholder="Midnight in Paris">
+
+            <label for="year">Year</label>
+            <select name="year" id="year">
+               <option value="any">Any</option>
+               <option>1996</option>
+               <option>1997</option>
+               <option>1998</option>
+               <option>1999</option>
+               <option>2000</option>
+               <option>2001</option>
+               <option>2002</option>
+               <option>2003</option>
+               <option>2004</option>
+               <option>2005</option>
+               <option>2006</option>
+               <option>2007</option>
+               <option>2008</option>
+               <option>2009</option>
+               <option>2010</option>
+               <option>2011</option>
+               <option>2012</option>
+               <option>2013</option>
+               <option>2014</option>
+               <option>2015</option>
+               <option>2016</option>
+               <option>2017</option>
+            </select>
+
+            <label for="count">Num. Wows</label>
+            <select name="count" id="count">
+               <option value="any">Any</option>
+               <option>1</option>
+               <option>2</option>
+               <option>3</option>
+               <option>4</option>
+               <option>5+</option>
+            </select>
+
+            <button type="submit">Search</button>
+         </form>
+      </header>
    </body>
 </html>
